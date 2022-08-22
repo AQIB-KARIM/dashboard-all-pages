@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/logo.png" />
+            </a>
+
+            <div class="nav-tab-content">
+                <h3>Strategy parameters VLI</h3>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <div class="dropdown avatar">
+                    <a href="#" class="d-block link-dark text-decoration-none" id="dropdownUser1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./images/card-1.png" alt="mdo" width="40" height="40" class="rounded-circle">
+                        <span class="user_name">User Detail</span>
+                        <p>user</p>
+                        <i class="fa-solid fa-angle-down mx-2"></i>
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownUser1">
+                        <li><a href="./profile.html" target="_blank"> My Account </a></li>
+                        <li><a href="./index.html" target="_blank"> Logout </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="tab" id="tabs">
+                    <a href="./index.html" target="_blank">
+                        <button class="tablinks">
+                            <img src="./images/dashboard-icon.png" width="20px" height="20px" />
+                            Dashboard
+                        </button>
+                    </a>
+
+                    <a href="./strategy.html" target="_blank">
+                        <button class="tablinks active">
+                            <img src="./images/strategy-icons.png" width="20px" height="20px" />
+                            Strategy Parameters
+                        </button>
+                    </a>
+
+                    <a href="./Tdameritrade.html" target="_blank">
+                        <button class="tablinks">
+                            <img src="./images/td-icon.png" width="20px" height="20px" />
+                            TD Ameritrade Dashboard
+                        </button>
+                    </a>
+
+                    <a href="./profile.html" target="_blank">
+                        <button class="tablinks">
+                            <img src="./images/profile-icon.png" width="20px" height="20px" />
+                            Profile Page
+                        </button>
+                    </a>
+
+                    <a href="./contact.html" target="_blank">
+                        <button class="tablinks">
+                            <img src="./images/contact-icon.png" width="20px" height="20px" />
+                            Contact Us
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-10">
+                <div class="strategy_main_container">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form_container">
+                                    <p>Broker*</p>
+                                    <select class="form-select select" aria-label="Default select example">
+                                        <option selected>TD Ameritrade</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form_container">
+                                    <p>Multiplier*</p>
+                                    <select class="form-select select" aria-label="Default select example">
+                                        <option selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 bot">
+                                <div class="check_bot_activated mt-4 mx-2">
+                                    <img src="./images/green-online.png" width="40px" height="40px" />
+                                    Bot Activated
+                                </div>
+                                <p>Check to activate the bot</p>
+                            </div>
+                        </div>
+                        <hr class="line_break" />
+
+                        <div class="row">
+                            <div class="col-md-6 p-0">
+                                <div class="strategy_card">
+                                    <p class="head">Allowed discord channels</p>
+                                    <div class="row check_form_container">
+                                        <div class="col-md-3">
+                                            <input type="checkbox" id="mirror5k" name="mirror5k" value="mirror5k_25k">
+                                            <label for="mirror5k"> mirror 5k-25k</label>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <input type="checkbox" id="autobot25k" name="autobot25k" value="autobot25k">
+                                            <label for="autobot25k"> autobot 25k</label>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <input type="checkbox" id="mirror5k" name="mirror5k" value="mirror5k_25k">
+                                            <label for="mirror5k"> mirror 5k-25k</label>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <input type="checkbox" id="websitetest" name="websitetest"
+                                                value="websitetest">
+                                            <label for="websitetest"> website test</label>
+                                        </div>
+
+                                        <hr class="line_break mt-3" />
+
+                                        <div class="col-md-3">
+                                            <input type="checkbox" id="websitetest2" name="websitetest2"
+                                                value="websitetest2">
+                                            <label for="websitetest2"> website test-2</label>
+                                        </div>
+
+                                        <hr class="line_break mt-3" />
+
+                                        <div class="col-md-12">
+                                            <div class="trading_channels_container">
+                                                <p>Select your Trading Channels</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="strategy_card">
+                                    <p class="head">Allowed discord users</p>
+                                    <div class="row check_form_container">
+                                        <div class="col-md-4">
+                                            <input type="checkbox" id="ousBot#3492" name="ousBot#3492"
+                                                value="ousBot#3492">
+                                            <label for="ousBot#3492"> Out Bot#3492</label>
+                                        </div>
+
+                                        <div class="col-md-4 p-0">
+                                            <input type="checkbox" id="Kindredd" name="Kindredd" value="Kindredd">
+                                            <label for="Kindredd"> Kindredd(Options)#4009</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" id="hellojason#5643" name="hellojason#5643"
+                                                value="hellojason#5643">
+                                            <label for="hellojason#5643"> hellojason#5643</label>
+                                        </div>
+
+                                        <hr class="line_break mt-3" />
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" id="hellojason2#6473" name="hellojason2#6473"
+                                                value="hellojason2#6473">
+                                            <label for="websitetest"> hellojason2#6473</label>
+                                        </div>
+
+                                        <div class="col-md-4 p-0">
+                                            <input type="checkbox" id="EvaPanda" name="EvaPanda" value="EvaPanda">
+                                            <label for="EvaPanda"> EvaPanda (Options)#1676</label>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <input type="checkbox" id="thun-25k" name="thun-25k" value="thun-25k">
+                                            <label for="thun-25k"> thun-25k</label>
+                                        </div>
+
+                                        <hr class="line_break mt-3" />
+
+                                        <div class="col-md-4 cool_bot">
+                                            <input type="checkbox" id="cool_boot#0000" name="cool_boot#0000"
+                                                value="cool_boot#0000">
+                                            <label for="cool_boot#0000"> Cool bot#0000</label>
+                                        </div>
+
+                                        <div class="col-md-4 forward p-0">
+                                            <input type="checkbox" id="forward_msg#6726" name="forward_msg"
+                                                value="forward_msg">
+                                            <label for="forward_msg"> Forward Message#6726</label>
+                                        </div>
+
+                                        <hr class="line_break mt-3" />
+
+                                        <div class="col-md-12">
+                                            <div class="trading_channels_container">
+                                                <p>Select your Trading Channels</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="line_break" />
+
+                            <div class="col-md-12">
+                                <div class="submit_container">
+                                    <button class="submit" type="submit">Submit</button>
+                                    <button class="cancel">Cancel</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
